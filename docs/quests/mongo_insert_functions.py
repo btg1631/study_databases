@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 
-def Connect_Mongo(localhost_name, database_name, collection_name):
-    mongoClient = MongoClient(localhost_name)    # mongodb 접속
+def Connect_Mongo(localhost, database_name, collection_name):
+    mongoClient = MongoClient(localhost)    # mongodb 접속
     database = mongoClient[database_name]         # database 연결
     return database[collection_name]          # collection 작업
 
