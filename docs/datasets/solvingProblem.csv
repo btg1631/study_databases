@@ -1,0 +1,6 @@
+_id,question,choices[0],choices[1],choices[2],choices[3],answer,answer_number,score,user_input
+657bb89da0064fd900b4270e,Python의 생성자 함수 이름은 무엇인가요?,__init__,__main__,__str__,__del__,__init__,1,20,1
+657bb89da0064fd900b4270f,"Python에서 'Hello, World!'를 출력하는 코드는 무엇인가요?","print('Hello, World!')","console.log('Hello, World!')","printf('Hello, World!')","echo 'Hello, World!'","print('Hello, World!')",1,20,1
+657bb89da0064fd900b42710,Python의 주석을 나타내는 기호는 무엇인가요?,//,/* */,#,--,#,3,20,3
+657bb89da0064fd900b42711,Python에서 리스트의 길이를 반환하는 함수는 무엇인가요?,size(),length(),len(),sizeof(),len(),3,20,3
+657bb89da0064fd900b42712,Python에서 문자열을 숫자로 변환하는 함수는 무엇인가요?,str(),int(),char(),float(),int(),2,20,3
