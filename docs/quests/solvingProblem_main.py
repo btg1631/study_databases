@@ -40,6 +40,6 @@ quiz_list = [
 
 collection = solvingProblem_functions.Connect_Mongo("mongodb://localhost:27017", "local", "solvingproblem")
 
-solvingProblem_functions.Data_insert(quiz_list)
+solvingProblem_functions.Data_insert(collection, quiz_list)
 
-solvingProblem_functions.Problem()
+solvingProblem_functions.Problem(collection)

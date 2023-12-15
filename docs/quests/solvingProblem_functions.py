@@ -1,17 +1,14 @@
-# import로 사용
 from pymongo import MongoClient
 
 def Connect_Mongo(localhost, database_name, collection_name):
     mongoClient = MongoClient(localhost)    # mongodb 접속
-    database = mongoClient[database_name]         # database 연결
-    return database[collection_name]          # collection 작업
+    database = mongoClient[database_name]   # database 연결
+    return database[collection_name]        # collection 작업
 
-collection = Connect_Mongo("mongodb://localhost:27017", "local", "solvingproblem")
-
-def Data_insert(data):
+def Data_insert(collection, data):
     collection.insert_many(data)
 
-def Problem():
+def Problem(collection):
     doc = collection.find({})
     score_temp = [1, 1, 3, 3, 2]
 
