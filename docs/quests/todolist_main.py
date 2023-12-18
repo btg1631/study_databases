@@ -1,7 +1,4 @@
-from pymongo import MongoClient
-mongoClient = MongoClient("mongodb://localhost:27017")
-database = mongoClient["local"]
-collection_todos = database['todos_list']
+import todolist_functions
 
 # ToDo 리스트 생성
 todo_list = [
@@ -12,43 +9,11 @@ todo_list = [
     {"title": "팀 멤버와의 1:1 면담", "description": "팀 멤버와 개별적으로 만나서 그들의 업무 진행 상황, 이슈, 우려사항 등을 논의합니다."},
 ]
 
-result_todo = collection_todos.insert_many(todo_list)
+collection_todos = todolist_functions.Connect_Mongo("todos_list")
+collection_participants = todolist_functions.Connect_Mongo("participants")
+collection_participants_todos = todolist_functions.Connect_Mongo("participants_todos")
+user_id = todolist_functions.User_name(collection_participants)
 
-#사용자 이름 입력 후 db 저장
-
-user_name = input("Input Your Name: ")
-
-collection_participants = database["participants"]
-result_participants = collection_participants.insert_one({"user_name" : user_name})
-inserted_participants_id = result_participants.inserted_id
-
-
-# print("ToDo List 중 하나 선택 하세요 !")
-doc = collection_todos.find({})
-for i in doc:
-    print(i["title"], end=", ")
-
-#todo중 하나 입력
-print("\n")
-user_input = int(input("Title 번호: "))
-
-
-# Status 입력
-user_status = input("Status: ")
-
-# 종료 여부 입력
-user_end = input("종료 여부: ")
-
-
-# 사용자 id와 사용자가 입력한 번호에 해당하는 title의 id를 저장
-collection_participants_todos = database["participants_todos"]
-collection_participants_todos.insert_one({"user_id" : inserted_participants_id })
-
-result_todo = result_todo["title"][user_input]
-print(result_todo.inserted_id)
-#???????
-inserted_todo_id = result_todo.inserted_id
-
-collection_participants_todos.insert_one({"user_todo_id" : inserted_todo_id })
-
-
+todolist_functions.Data_insert(collection_todos, todo_list)
+todolist_functions.Todos(user_id, collection_todos, collection_participants_todos)
+todolist_functions.End(user_id, collection_participants, collection_todos, collection_participants_todos)
