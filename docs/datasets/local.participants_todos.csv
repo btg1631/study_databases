@@ -1,0 +1,5 @@
+_id,user_id,user_todo_id,todo_title,user_status
+657fb38abf1c69c4c9b75268,657fb387bf1c69c4c9b75262,657fb387bf1c69c4c9b75263,주간 보고서 작성,완료
+657fb390bf1c69c4c9b75269,657fb387bf1c69c4c9b75262,657fb387bf1c69c4c9b75264,이메일 확인 및 응답,진행 중
+657fb398bf1c69c4c9b7526b,657fb393bf1c69c4c9b7526a,657fb387bf1c69c4c9b75265,회의 준비,진행 중
+657fb3a3bf1c69c4c9b7526d,657fb39dbf1c69c4c9b7526c,657fb387bf1c69c4c9b75267,팀 멤버와의 1:1 면담,진행 중

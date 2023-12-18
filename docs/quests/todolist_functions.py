@@ -39,7 +39,10 @@ def Todos(user_id, collection1, collection2):
     result_todo = collection1.find().skip(user_input).limit(1)
     for doc in result_todo:
         inserted_todo = doc['title']
-    collection2.insert_one({"user_id" : user_id, "todo_title" : inserted_todo, "user_status" : user_status})
+        inserted_todo_id = doc['_id']
+    collection2.insert_one({"user_id" : user_id, "user_todo_id" : inserted_todo_id, "todo_title" : inserted_todo, "user_status" : user_status})
+
+
 
 # 종료 여부 입력
 def End(user_id, collection, collection1, collection2):
@@ -64,12 +67,6 @@ def End(user_id, collection, collection1, collection2):
 
 
 
-
-# # 사용자 id와 사용자가 입력한 번호에 해당하는 title의 id를 저장
-# result_todo = collection1.find().skip(user_input).limit(1)
-# for doc in result_todo:
-#     inserted_todo_id = doc['_id']
-# collection2.insert_one({"user_id" : user_id, "user_todo_id" : inserted_todo_id, "user_status" : user_status})
 
 
 
