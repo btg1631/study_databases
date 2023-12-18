@@ -17,9 +17,7 @@ def User_name(collection):
     inserted_participants_id = result_participants.inserted_id
     return inserted_participants_id
 
-
 def Todos(user_id, collection1, collection2):
-
     print("ToDo List 중 하나 선택 하세요 !")
     doc = collection1.find({})
     count = 1
@@ -31,7 +29,6 @@ def Todos(user_id, collection1, collection2):
 
     #todo중 하나 입력
     user_input = int(input("Title 번호: "))-1
-
     # Status 입력
     user_status = input("Status: ")
 
@@ -41,8 +38,6 @@ def Todos(user_id, collection1, collection2):
         inserted_todo = doc['title']
         inserted_todo_id = doc['_id']
     collection2.insert_one({"user_id" : user_id, "user_todo_id" : inserted_todo_id, "todo_title" : inserted_todo, "user_status" : user_status})
-
-
 
 # 종료 여부 입력
 def End(user_id, collection, collection1, collection2):
@@ -64,12 +59,3 @@ def End(user_id, collection, collection1, collection2):
         else:
             print("c, q, x 중 하나를 입력하세요.")
             End()
-
-
-
-
-
-
-
-
-
