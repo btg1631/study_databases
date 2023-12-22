@@ -50,6 +50,6 @@ collection_fruits_colors.insert_many(list_fruits_colors)
 
 # find from fruits_colors
 documents = collection_fruits_colors.find({ "fruits_id" : { "$eq" : inserted_id } })
-
+print(documents)
 pass
 # db.fruits_colors.find({ fruits_id : { $eq : ObjectId("657bf12e77238e20069959b9")} });

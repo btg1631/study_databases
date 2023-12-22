@@ -9,11 +9,21 @@ todo_list = [
     {"title": "팀 멤버와의 1:1 면담", "description": "팀 멤버와 개별적으로 만나서 그들의 업무 진행 상황, 이슈, 우려사항 등을 논의합니다."},
 ]
 
+#todos_list 컬렉션 생성 후 collection_todos 변수에 담기
 collection_todos = todolist_functions.Connect_Mongo("todos_list")
+#participants 컬렉션 생성 후 collection_participants 변수에 담기
 collection_participants = todolist_functions.Connect_Mongo("participants")
+#participants_todos 컬렉션 생성 후 collection_participants_todos 변수에 담기
 collection_participants_todos = todolist_functions.Connect_Mongo("participants_todos")
+
+# 사용자 이름 입력 function 호출
+# 입력된 이름을 
 user_id = todolist_functions.User_name(collection_participants)
 
+# 데이터 입력 function 호출
+# todos_list 컬렉션에 todo_list 데이터를 입력
 todolist_functions.Data_insert(collection_todos, todo_list)
+
 todolist_functions.Todos(user_id, collection_todos, collection_participants_todos)
+
 todolist_functions.End(user_id, collection_participants, collection_todos, collection_participants_todos)
