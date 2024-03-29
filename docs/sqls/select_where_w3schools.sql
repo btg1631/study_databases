@@ -11,4 +11,3 @@ WHERE CustomerID in (1, 5, 10, 15);         COUNT : 4
 WHERE City = 'London';          COUNT : 6
 WHERE City IN ('London', 'Berlin');        COUNT : 7
 WHERE City IN ('London', 'Berlin') AND CustomerID <= 11;     COUNT : 3
-
