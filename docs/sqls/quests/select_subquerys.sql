@@ -34,5 +34,19 @@ WHERE SupplierID IN (SELECT SupplierID
                     ) AS SUB_SUPPLIERS
 );
 
-
+----------------
+SELECT *
+FROM Suppliers
+WHERE SupplierID = (
+                SELECT Category_GROUP.SupplierID
+                FROM (SELECT CategoryID, SupplierID, COUNT(CategoryID)
+                      FROM Products
+                      WHERE 1 = 1
+                      GROUP BY CategoryID, SupplierID
+                      ) AS Category_GROUP
+                WHERE 1 = 1
+                GROUP BY Category_GROUP.SupplierID
+                ORDER BY COUNT(Category_GROUP.SupplierID) DESC
+                );
+-- 뭔가 오류가 남.. ㅜㅜ 왜지
 
