@@ -26,12 +26,12 @@ WHERE EmployeeID IN (SELECT EmployeeID
 SELECT *
 FROM Suppliers
 WHERE SupplierID IN (SELECT SupplierID
-                  FROM (SELECT COUNT(SupplierID) AS CNT, SupplierID
-                  FROM Products
-                  GROUP BY SupplierID
-                  ORDER BY CNT DESC
-                  LIMIT 2
-                  ) AS SUB_SUPPLIERS
+                    FROM (SELECT COUNT(SupplierID) AS CNT, SupplierID
+                            FROM Products
+                            GROUP BY SupplierID
+                            ORDER BY CNT DESC
+                            LIMIT 2
+                    ) AS SUB_SUPPLIERS
 );
 
 
