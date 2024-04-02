@@ -1,3 +1,4 @@
+-- https://www.w3schools.com/sql/sql_join.asp
 -- 2개 JOIN
 SELECT *
 FROM Products INNER JOIN Suppliers
@@ -25,4 +26,23 @@ FROM Products AS PRODUCT INNER JOIN Suppliers AS SUPPLIER
     AND SupplierName IN ('Exotic Liquid', 'Tokyo Traders')
      INNER JOIN Categories
         ON PRODUCT.CategoryID = Categories.CategoryID
+;
+
+-----------------------------------------------------------------------
+-- https://www.w3schools.com/sql/sql_join_left.asp
+-- LEFT JOIN
+SELECT CustomerID, COUNT(CustomerID) AS CNT
+FROM Orders
+GROUP BY CustomerID
+;
+
+SELECT Customers.CustomerName, ORDERS_GROUP.CustomerID
+FROM Customers
+    LEFT JOIN (SELECT CustomerID, COUNT(CustomerID) AS CNT
+                FROM Orders
+                GROUP BY CustomerID
+              ) AS ORDERS_GROUP
+    ON Customers.CustomerID = ORDERS_GROUP.CustomerID
+WHERE ORDERS_GROUP.CustomerID IS NULL
+ORDER BY Customers.CustomerName
 ;
