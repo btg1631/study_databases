@@ -21,7 +21,7 @@
 ```
 </details>
 
-## [프로그래머스(PROGRAMMERS)](https://school.programmers.co.kr/learn/challenges?order=acceptance_desc&page=1&levels=1&languages=mysql)
+## [프로그래머스(PROGRAMMERS)](https://school.programmers.co.kr/learn/challenges?order=acceptance_desc&page=1&languages=mysql)
 <details> 
   <summary>MYSQL Lv. 1</summary>
   <p></p>
