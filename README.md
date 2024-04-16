@@ -71,13 +71,12 @@
 |SELECT|[MYSQL](./docs/codingtests/.sql)||[프로그래머스 ](https://school.programmers.co.kr/learn/courses/30/lessons/)||
 |SELECT|[MYSQL](./docs/codingtests/.sql)||[프로그래머스 ](https://school.programmers.co.kr/learn/courses/30/lessons/)||
 |SELECT|[MYSQL](./docs/codingtests/.sql)||[프로그래머스 ](https://school.programmers.co.kr/learn/courses/30/lessons/)||
-
 |SELECT|[MYSQL](./docs/codingtests/.sql)||[프로그래머스 ](https://school.programmers.co.kr/learn/courses/30/lessons/)||
 
 </details>
 
-## 💻 SQL
-- 어쩌구저쩌구설명
+## 💻 SQL(Structured Query Language)
+- 데이터베이스에서 데이터를 추출하고 조작하는 데에 사용하는 데이터 처리 언어
 
 |*|제목|code|설명|비고|
 |--|--|--|--|--|
@@ -95,11 +94,15 @@
 
 
 
-## QUEST
+## 📚 QUEST
 |*|제목|code|설명|비고|
 |--|--|--|--|--|
-|0|select_group_havings_orderby|[select_group_havings_orderby](./docs/sqls/quests/select_group_havings_orderby.sql)|설명|서브 쿼리 사용|
-|0||[](./docs/sqls/quests/.sql)|설명|서브 쿼리 사용|
-|0|common_codes|[common_codes](./docs/sqls/quests/common_codes.sql)|설명|common code 사용|
-|0||[](./docs/sqls/quests/.sql)|설명|서브 쿼리 사용|
-|0||[](./docs/sqls/quests/.sql)|설명|서브 쿼리 사용|
+|0|DELETE|[DELETE](./docs/sqls/quests/NOTICE_DELETES.sql)|DELETE||
+|1|INSERT|[INSERT](./docs/sqls/quests/NOTICE_INSERTS.sql)|INSERT||
+|2|USERSwithlnestSQL|[STUDY_USERSwithlnestSQL](./docs/sqls/quests/STUDY_USERSwithlnestSQL.sql)|INSERT, DELETE, UPDATE 수행||
+|3|selectwhere|[selectwhereRangeAndEquals](./docs/sqls/quests/selectwhereRangeAndEquals.sql)|WHERE|NOT IN, BETWEEN 사용|
+|4|select_group_havings_orderby|[select_group_havings_orderby](./docs/sqls/quests/select_group_havings_orderby.sql)|설명|서브 쿼리 사용|
+|5|select_subquerys|[select_subquerys](./docs/sqls/quests/select_subquerys.sql)|WHERE||
+|6|select_joins|[select_joins](./docs/sqls/quests/select_joins.sql)|JOIN||
+|7|select_alls|[select_alls](./docs/sqls/quests/select_alls.sql)|JOIN||
+|8|common_codes|[common_codes](./docs/sqls/quests/common_codes.sql)|설명|common code 사용|
